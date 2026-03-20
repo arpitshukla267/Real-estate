@@ -1,0 +1,116 @@
+import { useRef } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { PerspectiveCamera, OrbitControls, Stars, Sparkles } from '@react-three/drei';
+
+export const Hero = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
+  return (
+    <section ref={containerRef} className="relative h-screen w-full overflow-hidden bg-[#050505]">
+      {/* 3D Universe Background */}
+      <div className="absolute inset-0 z-0">
+        <Canvas shadows>
+          <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={40} />
+          <color attach="background" args={['#050505']} />
+          
+          <Stars 
+            radius={100} 
+            depth={50} 
+            count={5000} 
+            factor={4} 
+            saturation={0} 
+            fade 
+            speed={1} 
+          />
+          <Sparkles 
+            count={200} 
+            scale={20} 
+            size={2} 
+            speed={0.5} 
+            opacity={0.2} 
+            color="#D4AF37" 
+          />
+          
+          <ambientLight intensity={0.4} />
+          <pointLight position={[10, 10, 10]} intensity={1.5} castShadow />
+          <spotLight position={[-10, 20, 10]} angle={0.15} penumbra={1} intensity={2} castShadow />
+          
+          <OrbitControls 
+            enableZoom={true} 
+            enablePan={false} 
+            minDistance={5} 
+            maxDistance={15}
+            autoRotate={false}
+            makeDefault
+          />
+        </Canvas>
+      </div>
+
+      {/* Content */}
+      <motion.div 
+        style={{ y, opacity, scale }}
+        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pointer-events-none"
+      >
+        <motion.div className="pointer-events-auto flex flex-col items-center">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-xs uppercase tracking-[0.5em] text-gold mb-6 font-medium"
+          >
+            Interactive Architectural Vision
+          </motion.span>
+          
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.7, duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="text-6xl md:text-9xl font-serif leading-tight mb-8"
+          >
+            Sculpting <br />
+            <span className="italic text-gold-gradient">The Future</span>
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            transition={{ delay: 1.2, duration: 1 }}
+            className="max-w-xl text-sm md:text-base font-light tracking-wide leading-relaxed text-white/60 mb-12"
+          >
+            Interact with our vision. Rotate and explore the geometry of tomorrow. 
+            A seamless blend of digital craftsmanship and architectural heritage.
+          </motion.p>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
+            <button className="px-10 py-4 border border-gold/40 hover:bg-gold hover:text-black transition-all duration-500 rounded-full text-xs uppercase tracking-widest font-bold">
+              View Projects
+            </button>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />
+      </motion.div>
+    </section>
+  );
+};
