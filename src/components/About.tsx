@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export const About = () => {
   return (
-    <section id="about" className="py-32 px-6 md:px-12 bg-[#050505]">
+    <section id="about" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
@@ -26,7 +26,7 @@ export const About = () => {
               className="absolute -bottom-10 -right-10 glass p-8 rounded-2xl hidden md:block"
             >
               <p className="text-4xl font-serif text-gold mb-1">15+</p>
-              <p className="text-[10px] uppercase tracking-widest text-white/60">Years of Excellence</p>
+              <p className="text-[10px] uppercase tracking-widest text-slate-600">Years of Excellence</p>
             </motion.div>
           </div>
 
@@ -48,10 +48,10 @@ export const About = () => {
             <motion.p 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.6 }}
-              className="text-lg font-light leading-relaxed text-white/70"
+              className="text-lg font-light leading-relaxed text-slate-700"
             >
               Founded on the principles of uncompromising quality and visionary design, 
-              LuxReal has become the global benchmark for high-end real estate. 
+              Pandey Builders has become the global benchmark for high-end real estate. 
               Our portfolio spans continents, each project a testament to our 
               commitment to architectural innovation and sustainable luxury.
             </motion.p>
@@ -59,11 +59,11 @@ export const About = () => {
             <div className="grid grid-cols-2 gap-8 pt-8">
               <div>
                 <h4 className="text-gold font-serif text-xl mb-2">Innovation</h4>
-                <p className="text-sm text-white/40">Pushing the boundaries of what's possible in modern construction.</p>
+                <p className="text-sm text-slate-600">Pushing the boundaries of what's possible in modern construction.</p>
               </div>
               <div>
                 <h4 className="text-gold font-serif text-xl mb-2">Sustainability</h4>
-                <p className="text-sm text-white/40">Integrating eco-conscious solutions without sacrificing luxury.</p>
+                <p className="text-sm text-slate-600">Integrating eco-conscious solutions without sacrificing luxury.</p>
               </div>
             </div>
 

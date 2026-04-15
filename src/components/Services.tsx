@@ -26,7 +26,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-32 px-6 md:px-12 bg-[#080808]">
+    <section id="services" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-blue-50/40">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">
@@ -49,7 +49,7 @@ export const Services = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 0.5 }}
-            className="max-w-sm text-sm leading-relaxed"
+            className="max-w-sm text-sm leading-relaxed text-slate-600"
           >
             We provide a comprehensive suite of services tailored for the most 
             discerning clients in the global real estate market.
@@ -63,13 +63,13 @@ export const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-gold/30 transition-all duration-500 group"
+              className="p-8 rounded-2xl bg-white border border-slate-900/5 hover:border-gold/30 shadow-sm hover:shadow-md transition-all duration-500 group"
             >
               <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:scale-110 transition-transform">
                 <service.icon size={24} />
               </div>
               <h3 className="text-xl font-serif mb-4">{service.title}</h3>
-              <p className="text-sm text-white/40 leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed">
                 {service.desc}
               </p>
             </motion.div>

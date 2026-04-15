@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "LuxReal didn't just find us a home; they curated an experience that redefined our lifestyle. Their attention to architectural detail is unmatched.",
+    quote: "Pandey Builders didn't just find us a home; they curated an experience that redefined our lifestyle. Their attention to architectural detail is unmatched.",
     name: "Alexander Vance",
     role: "CEO, Vance Enterprises"
   },
@@ -21,7 +21,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-32 px-6 md:px-12 bg-[#050505] relative overflow-hidden">
+    <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export const Testimonials = () => {
                 duration: 1,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="relative p-10 rounded-3xl glass group hover:border-gold/20 transition-all duration-500"
+              className="relative p-10 rounded-3xl glass group hover:border-gold/20 shadow-sm hover:shadow-md transition-all duration-500"
             >
               <Quote className="text-gold/20 absolute top-8 right-8 group-hover:text-gold/40 transition-colors" size={40} />
               
@@ -52,7 +52,7 @@ export const Testimonials = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.2 + 0.3, duration: 0.8 }}
-                className="text-lg font-light leading-relaxed text-white/80 mb-8 italic"
+                className="text-lg font-light leading-relaxed text-slate-700 mb-8 italic"
               >
                 "{t.quote}"
               </motion.p>
@@ -64,7 +64,7 @@ export const Testimonials = () => {
                 className="mt-auto"
               >
                 <h4 className="text-gold font-serif text-xl">{t.name}</h4>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mt-1">{t.role}</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 mt-1">{t.role}</p>
               </motion.div>
             </motion.div>
           ))}

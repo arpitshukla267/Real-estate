@@ -15,7 +15,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <main className="bg-[#050505] text-white selection:bg-gold selection:text-black">
+    <main className="bg-white text-charcoal selection:bg-gold/20 selection:text-charcoal">
       <CustomCursor />
       
       <AnimatePresence mode="wait">

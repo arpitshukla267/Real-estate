@@ -5,14 +5,15 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", serif;
   
-  --color-gold: #D4AF37;
-  --color-charcoal: #121212;
-  --color-beige: #F5F5DC;
+  /* Brand tokens (keeps existing utility class names working) */
+  --color-gold: #2563EB; /* blue-600 */
+  --color-charcoal: #0B1220; /* deep navy (used for text / overlays) */
+  --color-beige: #EFF6FF; /* blue-50 */
 }
 
 :root {
-  background-color: #050505;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #0B1220;
   cursor: none;
 }
 
@@ -26,26 +27,26 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #EEF2FF;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: rgba(37, 99, 235, 0.35);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: rgba(37, 99, 235, 0.65);
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(to right, #D4AF37, #F5F5DC);
+  background: linear-gradient(to right, #2563EB, #38BDF8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

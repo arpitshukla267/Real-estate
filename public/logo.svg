@@ -1,0 +1,30 @@
+<svg width="320" height="96" viewBox="0 0 320 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pandey Builders">
+  <defs>
+    <linearGradient id="pb_g" x1="32" y1="12" x2="112" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4AF37"/>
+      <stop offset="0.55" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="pb_s" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Mark -->
+  <g filter="url(#pb_s)">
+    <path d="M32 18C32 13.5817 35.5817 10 40 10H96C100.418 10 104 13.5817 104 18V78C104 82.4183 100.418 86 96 86H40C35.5817 86 32 82.4183 32 78V18Z" fill="url(#pb_g)" opacity="0.14"/>
+    <path d="M52 66V30H70.5C78.9553 30 84 34.1269 84 41.5C84 46.1076 81.745 49.4968 77.8 51.3C83.151 52.8265 86 56.5806 86 62C86 70.25 80.125 76 70.9 76H52V66Z" fill="#0F172A"/>
+    <path d="M60.2 46.2H70.2C74.0583 46.2 76.2 44.4833 76.2 41.7C76.2 38.95 74.0667 37.3 70.2 37.3H60.2V46.2Z" fill="#2563EB"/>
+    <path d="M60.2 68.7H71C75.65 68.7 78.2 66.65 78.2 63.25C78.2 59.85 75.65 57.85 71 57.85H60.2V68.7Z" fill="#D4AF37"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g fill="#0F172A">
+    <text x="122" y="42" font-family="ui-serif, Georgia, serif" font-size="28" font-weight="700" letter-spacing="-0.02em">Pandey</text>
+    <text x="122" y="70" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0.18em" opacity="0.75">BUILDERS</text>
+  </g>
+</svg>

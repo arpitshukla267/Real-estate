@@ -3,9 +3,9 @@ import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from 'lucide-react'
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-32 px-6 md:px-12 bg-[#050505] relative overflow-hidden">
+    <section id="contact" className="pb-10 pt-20 sm:pt-24 md:pt-32 px-4 sm:px-6 md:px-12 bg-blue-50/40 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/5 blur-[120px] rounded-full -mr-64 -mb-64" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/10 blur-[120px] rounded-full -mr-64 -mb-64" />
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div>
@@ -27,31 +27,31 @@ export const Contact = () => {
 
           <div className="space-y-8">
             <div className="flex items-center gap-6 group cursor-pointer">
-              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-gold transition-colors">
-                <Mail size={20} className="text-white/60 group-hover:text-gold" />
+              <div className="w-12 h-12 rounded-full border border-slate-900/10 bg-white/60 backdrop-blur flex items-center justify-center group-hover:border-gold transition-colors">
+                <Mail size={20} className="text-slate-700 group-hover:text-gold" />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Email Us</p>
-                <p className="text-lg font-medium">concierge@luxreal.com</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Email Us</p>
+                <p className="text-lg font-medium">concierge@pandeybuilders.com</p>
               </div>
             </div>
 
             <div className="flex items-center gap-6 group cursor-pointer">
-              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-gold transition-colors">
-                <Phone size={20} className="text-white/60 group-hover:text-gold" />
+              <div className="w-12 h-12 rounded-full border border-slate-900/10 bg-white/60 backdrop-blur flex items-center justify-center group-hover:border-gold transition-colors">
+                <Phone size={20} className="text-slate-700 group-hover:text-gold" />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Call Us</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Call Us</p>
                 <p className="text-lg font-medium">+1 (888) LUX-REAL</p>
               </div>
             </div>
 
             <div className="flex items-center gap-6 group cursor-pointer">
-              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-gold transition-colors">
-                <MapPin size={20} className="text-white/60 group-hover:text-gold" />
+              <div className="w-12 h-12 rounded-full border border-slate-900/10 bg-white/60 backdrop-blur flex items-center justify-center group-hover:border-gold transition-colors">
+                <MapPin size={20} className="text-slate-700 group-hover:text-gold" />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Visit Us</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Visit Us</p>
                 <p className="text-lg font-medium">5th Ave, Manhattan, NY</p>
               </div>
             </div>
@@ -62,8 +62,8 @@ export const Contact = () => {
               <motion.a
                 key={i}
                 href="#"
-                whileHover={{ y: -5, color: '#D4AF37' }}
-                className="text-white/40 transition-colors"
+                whileHover={{ y: -5, color: '#2563EB' }}
+                className="text-slate-500 transition-colors"
               >
                 <Icon size={24} />
               </motion.a>
@@ -79,51 +79,51 @@ export const Contact = () => {
           <form className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
-                <label className="text-[10px] uppercase tracking-widest text-white/40">Full Name</label>
+                <label className="text-[10px] uppercase tracking-widest text-slate-600">Full Name</label>
                 <input 
                   type="text" 
-                  className="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition-colors"
+                  className="w-full bg-transparent border-b border-slate-900/10 py-3 focus:border-gold outline-none transition-colors placeholder:text-slate-400"
                   placeholder="John Doe"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] uppercase tracking-widest text-white/40">Email Address</label>
+                <label className="text-[10px] uppercase tracking-widest text-slate-600">Email Address</label>
                 <input 
                   type="email" 
-                  className="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition-colors"
+                  className="w-full bg-transparent border-b border-slate-900/10 py-3 focus:border-gold outline-none transition-colors placeholder:text-slate-400"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
             
             <div className="space-y-2">
-              <label className="text-[10px] uppercase tracking-widest text-white/40">Interest</label>
-              <select className="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition-colors appearance-none">
-                <option className="bg-charcoal">Residential Acquisition</option>
-                <option className="bg-charcoal">Commercial Development</option>
-                <option className="bg-charcoal">Interior Design</option>
+              <label className="text-[10px] uppercase tracking-widest text-slate-600">Interest</label>
+              <select className="w-full bg-transparent border-b border-slate-900/10 py-3 focus:border-gold outline-none transition-colors appearance-none text-slate-800">
+                <option className="bg-white">Residential Acquisition</option>
+                <option className="bg-white">Commercial Development</option>
+                <option className="bg-white">Interior Design</option>
               </select>
             </div>
 
             <div className="space-y-2">
-              <label className="text-[10px] uppercase tracking-widest text-white/40">Message</label>
+              <label className="text-[10px] uppercase tracking-widest text-slate-600">Message</label>
               <textarea 
                 rows={4}
-                className="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition-colors resize-none"
+                className="w-full bg-transparent border-b border-slate-900/10 py-3 focus:border-gold outline-none transition-colors resize-none placeholder:text-slate-400"
                 placeholder="Tell us about your vision..."
               />
             </div>
 
-            <button className="w-full py-5 bg-gold text-black font-bold uppercase tracking-widest rounded-xl hover:bg-white transition-colors duration-500">
+            <button className="w-full py-5 bg-gold text-white font-bold uppercase tracking-widest rounded-xl hover:bg-gold/90 transition-colors duration-500">
               Send Inquiry
             </button>
           </form>
         </motion.div>
       </div>
 
-      <footer className="mt-32 pt-12 border-top border-white/5 text-center">
-        <p className="text-[10px] uppercase tracking-[0.5em] text-white/20">
-          © 2026 LUXREAL ESTATE. ALL RIGHTS RESERVED.
+      <footer className="mt-20 sm:mt-24 md:mt-32 pt-12 border-t border-slate-900/5 text-center">
+        <p className="text-[10px] uppercase tracking-[0.5em] text-slate-500/70">
+          © 2026 PANDEY BUILDERS. ALL RIGHTS RESERVED.
         </p>
       </footer>
     </section>
