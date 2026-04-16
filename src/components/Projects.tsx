@@ -40,15 +40,15 @@ export const Projects = () => {
   return (
     <section id="projects" ref={targetRef} className="relative h-[340vh] bg-gradient-to-b from-white via-white to-blue-50/70">
       <div className="sticky top-0 h-screen overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-24 md:pt-28">
+        <div className="max-w-7xl px-4 sm:px-6 md:px-12 pt-24 md:pt-28">
           <motion.h2 
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl md:text-7xl font-serif uppercase tracking-tighter leading-[0.95] text-slate-900"
+            className="text-4xl sm:text-5xl md:text-8xl font-bold uppercase tracking-tighter leading-[0.9] text-slate-900"
           >
             Featured{" "}
-            <span className="text-gold">Projects</span>
+            <span className="text-blue-600">Projects</span>
           </motion.h2>
           <p className="mt-4 max-w-xl text-sm sm:text-base text-slate-600">
             A curated selection of residences and hospitality concepts with a focus on light, form, and livability.
@@ -73,9 +73,9 @@ export const Projects = () => {
               
               <div className="absolute inset-x-6 sm:inset-x-8 bottom-6 sm:bottom-8 flex justify-between items-end">
                 <div>
-                  <p className="text-gold text-[10px] sm:text-xs uppercase tracking-widest mb-2">{project.category}</p>
-                  <h3 className="text-2xl md:text-3xl font-serif text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.25)]">{project.title}</h3>
-                  <p className="text-white/80 text-xs sm:text-sm mt-1 drop-shadow-[0_10px_30px_rgba(0,0,0,0.25)]">{project.location}</p>
+                  <p className="text-blue-400 text-[10px] sm:text-xs uppercase tracking-[0.3em] font-bold mb-3">{project.category}</p>
+                  <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white drop-shadow-2xl">{project.title}</h3>
+                  <p className="text-white/70 text-xs sm:text-sm mt-2 font-medium">{project.location}</p>
                 </div>
                 <motion.div 
                   whileHover={{ scale: 1.1, rotate: 45 }}
